@@ -24,7 +24,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #0077cc;
+  color: #444;
   font-weight: 500;
   transition: color 0.2s;
   font-family: 'Harlow Solid Italic', cursive;
@@ -34,7 +34,7 @@ nav ul li a {
   padding: 0.5rem 1rem;
 }
 nav ul li a:hover {
-  color: #005fa3;
+  color: #222;
 }
 header, main {
   max-width: 700px;
@@ -46,7 +46,7 @@ h1 {
   font-style: italic;
   font-size: 60px;
   text-align: center;
-  color: #000;
+  color: #444;
 }
 h1, h2, h3, h4, h5, h6, p, li, label, input, textarea {
   text-align: center;
@@ -120,11 +120,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   margin-top: 2rem;
 }
 .gradient-text {
-  background: linear-gradient(90deg, #ff9966, #ff5e62, #00c3ff, #ffff1c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: #444;
   font-weight: bold;
 }
 .special-message {
@@ -226,6 +222,12 @@ main {
   .about, .contact, .story {
     padding: 1rem;
   }
+  h1 {
+    color: #444;
+  }
+  .gradient-text {
+    color: #444;
+  }
   .story-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
@@ -244,6 +246,7 @@ main {
     line-height: 1.3;
     word-wrap: break-word;
     hyphens: auto;
+    max-width: 120px;
   }
   .story-subtitle {
     font-size: 0.85rem;
