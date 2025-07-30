@@ -263,6 +263,10 @@ main {
   .story-date {
     font-size: 0.9rem;
   }
+  
+  .bottom-spacer {
+    height: 60px;
+  }
 } 
 .about {
   max-width: 700px !important;
@@ -294,4 +298,9 @@ header.glass-box {
 
 .audio-link a:hover {
   color: #005fa3;
+}
+
+.bottom-spacer {
+  height: 100px;
+  width: 100%;
 }
