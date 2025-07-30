@@ -9,9 +9,6 @@
 </head>
 <body>
   <nav>
-    <button class="nav-toggle" aria-label="Menüyü Aç/Kapat">
-      <i class="fas fa-bars"></i>
-    </button>
     <ul>
       <li><a href="index.html" title="Anasayfa"><i class="fas fa-home"></i></a></li>
       <!-- <li><a href="hikayelerim.html" title="Hikayelerim"><i class="fas fa-book-open"></i></a></li> -->
@@ -20,7 +17,7 @@
     </ul>
   </nav>
   <header class="glass-box">
-    <h1 class="gradient-text">Hikayelerim</h1>
+    <h1 class="gradient-text">Hikayeler</h1>
   </header>
   <main>
     <section class="stories-list">
@@ -30,34 +27,32 @@
             <img src="pdfs/O-Gece_cover.jpg" alt="O Gece Kapak" class="story-cover-large">
           </a>
           <div class="story-title">O Gece</div>
+          <div class="story-subtitle">Bir Polisiye</div>
         </div>
         <div class="story-card glass-box">
           <a href="pdfs/Sonsuzlugun-Fisiltilari.pdf" target="_blank">
             <img src="pdfs/Sonsuzlugun-Fisiltilari_cover.jpg" alt="Sonsuzluğun Fısıltıları Kapak" class="story-cover-large">
           </a>
           <div class="story-title">Sonsuzluğun Fısıltıları</div>
+          <div class="story-subtitle">Varoluşa Bir Bakış</div>
         </div>
         <div class="story-card glass-box">
           <a href="pdfs/Ters-Dogum.pdf" target="_blank">
             <img src="pdfs/Ters-Dogum_cover.jpg" alt="Ters Doğum Kapak" class="story-cover-large">
           </a>
           <div class="story-title">Ters Doğum</div>
+          <div class="story-subtitle">Bir Varoluş Hikayesi</div>
         </div>
         <div class="story-card glass-box">
           <a href="pdfs/Sezgi.pdf" target="_blank">
             <img src="pdfs/Sezgi_cover.jpg" alt="Sezgi Kapak" class="story-cover-large">
           </a>
           <div class="story-title">Sezgi</div>
+          <div class="story-subtitle">Bir Polisiye</div>
         </div>
       </div>
     </section>
   </main>
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navUl = document.querySelector('nav ul');
-    navToggle.addEventListener('click', () => {
-      navUl.classList.toggle('open');
-    });
-  </script>
+
 </body>
 </html> 

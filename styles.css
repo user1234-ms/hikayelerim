@@ -176,6 +176,14 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   text-align: center;
   letter-spacing: 0.01em;
 }
+.story-subtitle {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
 .contact label {
   color: #444;
 }
@@ -197,33 +205,12 @@ main {
   margin: 0;
 }
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
-  nav ul.open {
-    display: flex;
-  }
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #0077cc;
-    cursor: pointer;
-    margin: 0 auto 0.5rem auto;
-  }
   header, main {
     padding: 0 0.5rem;
   }
   .about, .contact, .story {
     padding: 1rem;
   }
-}
-/* Masaüstünde hamburger butonunu gizle */
-.nav-toggle {
-  display: none;
 } 
 .about {
   max-width: 700px !important;
