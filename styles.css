@@ -226,6 +226,28 @@ main {
   .about, .contact, .story {
     padding: 1rem;
   }
+  .story-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .story-cover-large {
+    width: 120px;
+    height: 170px;
+  }
+  .story-card {
+    min-height: 280px;
+    padding: 1rem;
+  }
+  .story-title {
+    font-size: 1rem;
+  }
+  .story-subtitle {
+    font-size: 0.85rem;
+  }
+  .story-date {
+    font-size: 0.9rem;
+  }
 } 
 .about {
   max-width: 700px !important;
