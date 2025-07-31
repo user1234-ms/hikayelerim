@@ -135,13 +135,14 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
-  justify-items: stretch;
+  justify-items: center;
   align-items: stretch;
   margin-top: 2rem;
   padding-bottom: 1rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 .story-cover-large {
   width: 160px;
@@ -224,11 +225,13 @@ main:not(.stories-list) {
 }
 
 
-.stories-list {
-  max-width: none;
-  padding: 0;
-  margin: 0;
-}
+  .stories-list {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
 @media (max-width: 600px) {
   header {
     padding: 0 0.5rem;
@@ -264,6 +267,8 @@ main:not(.stories-list) {
     max-width: 320px;
     margin: 0 auto;
     justify-items: center;
+    justify-content: center;
+    width: 100%;
   }
   .story-cover-large {
     width: 120px;
