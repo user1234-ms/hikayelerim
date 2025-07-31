@@ -111,7 +111,7 @@ body, h1, h2, h3, h4, h5, h6, nav, p, li, label, input, textarea, .about, .conta
   font-style: italic;
 }
 h1, h2, h3, h4, h5, h6, p, li, label {
-  text-shadow: 0 3px 10px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.28), 0 1px 1px rgba(0,0,0,0.20), 0 1px 0 rgba(255,255,255,0.8);
+  text-shadow: 0 3px 10px rgba(0,0,0,0.675), 0 2px 6px rgba(0,0,0,0.525), 0 1px 3px rgba(0,0,0,0.42), 0 1px 1px rgba(0,0,0,0.30), 0 1px 0 rgba(255,255,255,0.8);
 }
 .glass-box {
   background: rgba(255,255,255,0.25);
@@ -148,13 +148,13 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   height: 220px;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.583), 0 6px 15px rgba(0,0,0,0.495), 0 3px 8px rgba(0,0,0,0.418), 0 2px 5px rgba(0,0,0,0.33), 0 1px 2px rgba(0,0,0,0.253);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.911), 0 6px 15px rgba(0,0,0,0.774), 0 3px 8px rgba(0,0,0,0.654), 0 2px 5px rgba(0,0,0,0.516), 0 1px 2px rgba(0,0,0,0.395);
   transition: transform 0.2s, box-shadow 0.2s;
   display: block;
 }
 .story-cover-large:hover {
   transform: scale(1.06) translateY(-4px);
-  box-shadow: 0 15px 36px rgba(0,0,0,0.66), 0 9px 18px rgba(0,0,0,0.583), 0 5px 9px rgba(0,0,0,0.495), 0 2px 6px rgba(0,0,0,0.418), 0 1px 3px rgba(0,0,0,0.33);
+  box-shadow: 0 15px 36px rgba(0,0,0,1.031), 0 9px 18px rgba(0,0,0,0.911), 0 5px 9px rgba(0,0,0,0.774), 0 2px 6px rgba(0,0,0,0.654), 0 1px 3px rgba(0,0,0,0.516);
 }
 .story-card {
   display: flex;
@@ -221,6 +221,7 @@ main {
 @media (max-width: 600px) {
   header, main {
     padding: 0 0.5rem;
+    max-width: 288px;
   }
   .about, .contact, .story {
     padding: 1rem;
@@ -282,6 +283,12 @@ header.glass-box {
   max-width: 320px !important;
   margin: 2rem auto !important;
   border-radius: 24px !important;
+}
+
+@media (max-width: 600px) {
+  header.glass-box {
+    max-width: 288px !important;
+  }
 } 
 .contact {
   max-width: 700px !important;
@@ -300,7 +307,7 @@ header.glass-box {
   font-size: 1.2rem;
   transition: color 0.2s, text-shadow 0.2s;
   text-shadow: 0 3px 12px rgba(0,0,0,0.583), 0 2px 6px rgba(0,0,0,0.495), 0 2px 3px rgba(0,0,0,0.418), 0 1px 1px rgba(0,0,0,0.33), 0 1px 0 rgba(255,255,255,0.8);
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .audio-link a:hover {
