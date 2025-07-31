@@ -1,9 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/harlow-solid-italic');
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.03)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
@@ -41,7 +37,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #005fa3;
 }
-header, main {
+header {
   max-width: 320px;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -137,7 +133,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
 }
 .story-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
   justify-items: stretch;
   align-items: stretch;
@@ -169,7 +165,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   box-sizing: border-box;
   height: 100%;
   min-height: 314px;
-  width: 90%;
+  width: 85%;
 }
 .story-date {
   margin-top: 0.7rem;
@@ -219,13 +215,28 @@ main {
   margin: 0;
   padding: 0;
 }
+
+/* Hakkımda ve İletişim sayfaları için main stili */
+main:not(.stories-list) {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
 .stories-list {
   max-width: none;
   padding: 0;
   margin: 0;
 }
 @media (max-width: 600px) {
-  header, main {
+  header {
+    padding: 0 0.5rem;
+    max-width: 288px;
+    margin: 2rem auto;
+  }
+  
+  main:not(.stories-list) {
     padding: 0 0.5rem;
     max-width: 288px;
     margin: 2rem auto;
@@ -373,22 +384,4 @@ header.glass-box {
   }
 }
 
-/* Footer Tarih Stilleri */
-.footer-date {
-  text-align: center;
-  font-size: 1rem;
-  color: #222;
-  font-weight: 600;
-  margin: 2rem auto;
-  font-family: 'Palatino Linotype', Palatino, serif;
-  font-style: italic;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
 
-/* Mobil için footer tarih */
-@media (max-width: 600px) {
-  .footer-date {
-    font-size: 0.9rem;
-    margin: 1.5rem auto;
-  }
-}
