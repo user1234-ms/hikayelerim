@@ -259,9 +259,10 @@ main:not(.stories-list) {
     color: #005fa3;
   }
   .story-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 100%;
+    justify-items: center;
   }
   .story-cover-large {
     width: 120px;
@@ -270,6 +271,7 @@ main:not(.stories-list) {
   .story-card {
     min-height: 247px;
     padding: 0.9rem;
+    width: 95%;
   }
   .story-title {
     font-size: 1rem;
