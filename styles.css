@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/harlow-solid-italic');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.03)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
@@ -165,7 +169,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   box-sizing: border-box;
   height: 100%;
   min-height: 314px;
-  width: 100%;
+  width: 90%;
 }
 .story-date {
   margin-top: 0.7rem;
@@ -208,6 +212,8 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   margin-right: auto;
   border-radius: 24px;
 }
+
+
 main {
   max-width: none;
   margin: 0;
@@ -222,6 +228,7 @@ main {
   header, main {
     padding: 0 0.5rem;
     max-width: 288px;
+    margin: 2rem auto;
   }
   .about, .contact, .story {
     padding: 1rem;
@@ -275,8 +282,8 @@ main {
   }
 } 
 .about {
-  max-width: 700px !important;
-  margin: 2rem auto !important;
+  max-width: 525px !important;
+  margin: 4rem auto !important;
   border-radius: 24px !important;
 }
 header.glass-box {
@@ -288,11 +295,12 @@ header.glass-box {
 @media (max-width: 600px) {
   header.glass-box {
     max-width: 288px !important;
+    margin: 2rem auto !important;
   }
 } 
 .contact {
   max-width: 700px !important;
-  margin: 2rem auto !important;
+  margin: 4rem auto !important;
   border-radius: 24px !important;
 } 
 
@@ -318,4 +326,69 @@ header.glass-box {
 .bottom-spacer {
   height: 100px;
   width: 100%;
+}
+
+
+
+/* Hikaye Görüntüleme Sayacı Stilleri */
+.story-view-counter {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #0077cc;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-family: 'Palatino Linotype', Palatino, serif;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.story-view-counter i {
+  color: #0077cc;
+  font-size: 0.9rem;
+}
+
+.story-view-counter span {
+  font-weight: bold;
+  color: #0077cc;
+  font-size: 0.9rem;
+}
+
+/* Mobil için hikaye görüntüleme sayacı */
+@media (max-width: 600px) {
+  .story-view-counter {
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+  }
+  
+  .story-view-counter i {
+    font-size: 0.8rem;
+  }
+  
+  .story-view-counter span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer Tarih Stilleri */
+.footer-date {
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+  font-weight: 600;
+  margin: 2rem auto;
+  font-family: 'Palatino Linotype', Palatino, serif;
+  font-style: italic;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Mobil için footer tarih */
+@media (max-width: 600px) {
+  .footer-date {
+    font-size: 0.9rem;
+    margin: 1.5rem auto;
+  }
 }
