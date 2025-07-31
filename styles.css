@@ -1,5 +1,41 @@
 @import url('https://fonts.cdnfonts.com/css/harlow-solid-italic');
 
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid #0077cc;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #0077cc;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
 body {
   font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.03)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
@@ -33,6 +69,8 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
   opacity: 0.5;
+  border-radius: 4px;
+  display: inline-block;
 }
 nav ul li a:hover {
   color: #005fa3;
@@ -86,6 +124,7 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  min-height: 44px;
 }
 button {
   background: #0077cc;
@@ -97,6 +136,8 @@ button {
   cursor: pointer;
   transition: background 0.2s;
   opacity: 0.5;
+  min-height: 44px;
+  min-width: 44px;
 }
 button:hover {
   background: #005fa3;
@@ -187,6 +228,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   word-wrap: break-word;
   hyphens: auto;
   text-shadow: 0 3px 12px rgba(0,0,0,0.50), 0 2px 6px rgba(0,0,0,0.40), 0 2px 3px rgba(0,0,0,0.30), 0 1px 1px rgba(0,0,0,0.20), 0 1px 0 rgba(255,255,255,0.8);
+  margin-bottom: 0.3rem;
 }
 .story-subtitle {
   margin-top: 0.3rem;
@@ -335,6 +377,9 @@ header.glass-box {
   transition: color 0.2s, text-shadow 0.2s;
   text-shadow: 0 3px 12px rgba(0,0,0,0.583), 0 2px 6px rgba(0,0,0,0.495), 0 2px 3px rgba(0,0,0,0.418), 0 1px 1px rgba(0,0,0,0.33), 0 1px 0 rgba(255,255,255,0.8);
   opacity: 0.75;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .audio-link a:hover {
@@ -389,6 +434,55 @@ header.glass-box {
   
   .story-view-counter span {
     font-size: 0.8rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  
+  .glass-box, .about, .contact, .story {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .story-title, .story-subtitle, .story-date {
+    color: #000;
+  }
+  
+  nav ul li a {
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+  }
+  
+  button {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  input, textarea {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .story-cover-large:hover {
+    transform: none;
   }
 }
 

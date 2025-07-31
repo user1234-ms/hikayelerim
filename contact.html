@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>İletişim - Yazarın Kişisel Web Sitesi</title>
+  <meta name="description" content="Yazar ile iletişime geçebileceğiniz iletişim formu">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav>
+  <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+  <nav role="navigation" aria-label="Ana navigasyon">
     <ul>
-      <li><a href="index.html" title="Anasayfa"><i class="fas fa-home"></i></a></li>
+      <li><a href="index.html" aria-label="Anasayfa"><i class="fas fa-home" aria-hidden="true"></i><span class="sr-only">Anasayfa</span></a></li>
       <!-- <li><a href="hikayelerim.html" title="Hikayelerim"><i class="fas fa-book-open"></i></a></li> -->
-      <li><a href="contact.html" title="İletişim"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="contact.html" aria-label="İletişim"><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">İletişim</span></a></li>
     </ul>
   </nav>
-  <main>
-    <section class="contact">
-      <h1 class="gradient-text">İletişim</h1>
-      <form action="https://formspree.io/f/xjkoydbd" method="POST">
+  <main role="main" id="main-content">
+    <section class="contact" aria-labelledby="contact-heading">
+      <h1 id="contact-heading" class="gradient-text">İletişim</h1>
+      <form action="https://formspree.io/f/xjkoydbd" method="POST" aria-labelledby="contact-heading">
         <label for="name">İsim:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">E-posta:</label>

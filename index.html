@@ -1,96 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Stories</title>
+  <title>Hikayeler - Yazarın Kişisel Web Sitesi</title>
+  <meta name="description" content="Yazarın hikayelerini okuyabileceğiniz ve dinleyebileceğiniz kişisel web sitesi">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav>
+  <a href="#main-content" class="skip-link">Ana içeriğe geç</a>
+  <nav role="navigation" aria-label="Ana navigasyon">
     <ul>
-      <li><a href="index.html" title="Anasayfa"><i class="fas fa-home"></i></a></li>
+      <li><a href="index.html" aria-label="Anasayfa"><i class="fas fa-home" aria-hidden="true"></i><span class="sr-only">Anasayfa</span></a></li>
       <!-- <li><a href="hikayelerim.html" title="Hikayelerim"><i class="fas fa-book-open"></i></a></li> -->
-      <li><a href="contact.html" title="İletişim"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="contact.html" aria-label="İletişim"><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">İletişim</span></a></li>
     </ul>
   </nav>
   
-  <header class="glass-box">
+  <header class="glass-box" role="banner">
     <h1 class="gradient-text">Hikayeler</h1>
   </header>
-  <main>
-    <section class="stories-list">
+  <main role="main" id="main-content">
+    <section class="stories-list" aria-labelledby="stories-heading">
+      <h2 id="stories-heading" class="sr-only">Hikaye Listesi</h2>
       <div class="story-grid">
-                 <div class="story-card glass-box">
-           <a href="pdfs/O-Gece.pdf">
-             <img src="pdfs/O-Gece_cover.jpg" alt="O Gece Kapak" class="story-cover-large">
+                 <article class="story-card glass-box">
+           <a href="pdfs/O-Gece.pdf" aria-label="O Gece hikayesini PDF olarak oku">
+             <img src="pdfs/O-Gece_cover.jpg" alt="O Gece hikayesinin kapak resmi" class="story-cover-large">
            </a>
-           <div class="story-title">O Gece</div>
-           <div class="story-subtitle">Bir Polisiye</div>
+           <h3 class="story-title">O Gece</h3>
+           <p class="story-subtitle">Bir Polisiye</p>
            <div class="audio-link">
-             <a href="pdfs/O-Gece.mp3" title="Ses Dosyasını Dinle">
-               <i class="fas fa-volume-up"></i>
+             <a href="pdfs/O-Gece.mp3" aria-label="O Gece hikayesini ses dosyası olarak dinle">
+               <i class="fas fa-volume-up" aria-hidden="true"></i>
+               <span class="sr-only">Ses dosyasını dinle</span>
              </a>
            </div>
-           <div class="story-view-counter">
-             <i class="fas fa-eye"></i>
+           <div class="story-view-counter" aria-label="Görüntüleme sayısı">
+             <i class="fas fa-eye" aria-hidden="true"></i>
              <span id="viewCount-O-Gece">0</span> görüntüleme
            </div>
-         </div>
-                 <div class="story-card glass-box">
-           <a href="pdfs/Sezgi.pdf">
-             <img src="pdfs/Sezgi_cover.jpg" alt="Sezgi Kapak" class="story-cover-large">
+         </article>
+                 <article class="story-card glass-box">
+           <a href="pdfs/Sezgi.pdf" aria-label="Sezgi hikayesini PDF olarak oku">
+             <img src="pdfs/Sezgi_cover.jpg" alt="Sezgi hikayesinin kapak resmi" class="story-cover-large">
            </a>
-           <div class="story-title">Sezgi</div>
-           <div class="story-subtitle">Bir Polisiye</div>
+           <h3 class="story-title">Sezgi</h3>
+           <p class="story-subtitle">Bir Polisiye</p>
            <div class="audio-link">
-             <a href="pdfs/Sezgi.mp3" title="Ses Dosyasını Dinle">
-               <i class="fas fa-volume-up"></i>
+             <a href="pdfs/Sezgi.mp3" aria-label="Sezgi hikayesini ses dosyası olarak dinle">
+               <i class="fas fa-volume-up" aria-hidden="true"></i>
+               <span class="sr-only">Ses dosyasını dinle</span>
              </a>
            </div>
-           <div class="story-view-counter">
-             <i class="fas fa-eye"></i>
+           <div class="story-view-counter" aria-label="Görüntüleme sayısı">
+             <i class="fas fa-eye" aria-hidden="true"></i>
              <span id="viewCount-Sezgi">0</span> görüntüleme
            </div>
-         </div>
-                 <div class="story-card glass-box">
-           <a href="pdfs/Ters-Dogum.pdf">
-             <img src="pdfs/Ters-Dogum_cover.jpg" alt="Ters Doğum Kapak" class="story-cover-large">
+         </article>
+                 <article class="story-card glass-box">
+           <a href="pdfs/Ters-Dogum.pdf" aria-label="Ters Doğum hikayesini PDF olarak oku">
+             <img src="pdfs/Ters-Dogum_cover.jpg" alt="Ters Doğum hikayesinin kapak resmi" class="story-cover-large">
            </a>
-           <div class="story-title">Ters Doğum</div>
-           <div class="story-subtitle">Bir Varoluş Hikayesi</div>
+           <h3 class="story-title">Ters Doğum</h3>
+           <p class="story-subtitle">Bir Varoluş Hikayesi</p>
            <div class="audio-link">
-             <a href="pdfs/Ters-Dogum.mp3" title="Ses Dosyasını Dinle">
-               <i class="fas fa-volume-up"></i>
+             <a href="pdfs/Ters-Dogum.mp3" aria-label="Ters Doğum hikayesini ses dosyası olarak dinle">
+               <i class="fas fa-volume-up" aria-hidden="true"></i>
+               <span class="sr-only">Ses dosyasını dinle</span>
              </a>
            </div>
-           <div class="story-view-counter">
-             <i class="fas fa-eye"></i>
+           <div class="story-view-counter" aria-label="Görüntüleme sayısı">
+             <i class="fas fa-eye" aria-hidden="true"></i>
              <span id="viewCount-Ters-Dogum">0</span> görüntüleme
            </div>
-         </div>
-                 <div class="story-card glass-box">
-           <a href="pdfs/Sonsuzlugun-Fisiltilari.pdf">
-             <img src="pdfs/Sonsuzlugun-Fisiltilari_cover.jpg" alt="Sonsuzluğun Fısıltıları Kapak" class="story-cover-large">
+         </article>
+                 <article class="story-card glass-box">
+           <a href="pdfs/Sonsuzlugun-Fisiltilari.pdf" aria-label="Sonsuzluğun Fısıltıları hikayesini PDF olarak oku">
+             <img src="pdfs/Sonsuzlugun-Fisiltilari_cover.jpg" alt="Sonsuzluğun Fısıltıları hikayesinin kapak resmi" class="story-cover-large">
            </a>
-           <div class="story-title">Sonsuzluğun Fısıltıları</div>
-           <div class="story-subtitle">Varoluşa Bir Bakış</div>
+           <h3 class="story-title">Sonsuzluğun Fısıltıları</h3>
+           <p class="story-subtitle">Varoluşa Bir Bakış</p>
            <div class="audio-link">
-             <a href="pdfs/Sonsuzlugun-Fisiltilari.mp3" title="Ses Dosyasını Dinle">
-               <i class="fas fa-volume-up"></i>
+             <a href="pdfs/Sonsuzlugun-Fisiltilari.mp3" aria-label="Sonsuzluğun Fısıltıları hikayesini ses dosyası olarak dinle">
+               <i class="fas fa-volume-up" aria-hidden="true"></i>
+               <span class="sr-only">Ses dosyasını dinle</span>
              </a>
            </div>
-           <div class="story-view-counter">
-             <i class="fas fa-eye"></i>
+           <div class="story-view-counter" aria-label="Görüntüleme sayısı">
+             <i class="fas fa-eye" aria-hidden="true"></i>
              <span id="viewCount-Sonsuzlugun-Fisiltilari">0</span> görüntüleme
            </div>
-         </div>
+         </article>
       </div>
          </section>
          
                    <!-- Hakkımda Bölümü -->
-          <section class="about">
+          <section class="about" role="complementary" aria-labelledby="about-heading">
+            <h2 id="about-heading" class="sr-only">Hakkımda</h2>
             <p style="color: #444;">Merhaba! Bu hikayelerin yazarıyım. Hayal gücümü paylaşmayı seviyorum. Keyifli okumalar! Düşüncelerinizi bekliyorum!</p>
           </section>
       </main>
