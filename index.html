@@ -107,9 +107,43 @@
 
            <!-- Hikaye Görüntüleme Sayacı JavaScript -->
     <script>
+      // API base URL - sunucu çalıştığında bu adresi kullanın
+      const API_BASE_URL = 'http://localhost:3000/api';
+      
       // Sayfa yüklendiğinde çalışacak fonksiyon
       window.onload = function() {
-        // Her hikaye için görüntüleme sayacı
+        loadViewCounts();
+        setupClickHandlers();
+      };
+      
+      // Görüntüleme sayılarını yükle
+      async function loadViewCounts() {
+        try {
+          const response = await fetch(`${API_BASE_URL}/viewCounts`);
+          if (response.ok) {
+            const counts = await response.json();
+            
+            // Her hikaye için sayacı güncelle
+            Object.keys(counts).forEach(story => {
+              const element = document.getElementById(`viewCount-${story}`);
+              if (element) {
+                element.textContent = counts[story];
+              }
+            });
+          } else {
+            console.error('Görüntüleme sayıları yüklenemedi');
+            // Fallback: localStorage'dan yükle
+            loadFromLocalStorage();
+          }
+        } catch (error) {
+          console.error('API bağlantı hatası:', error);
+          // Fallback: localStorage'dan yükle
+          loadFromLocalStorage();
+        }
+      }
+      
+      // localStorage'dan yükleme (fallback)
+      function loadFromLocalStorage() {
         const stories = [
           'O-Gece',
           'Sezgi', 
@@ -122,26 +156,66 @@
           if (!storyViewCount) {
             storyViewCount = 0;
           }
-          document.getElementById(`viewCount-${story}`).textContent = storyViewCount;
+          const element = document.getElementById(`viewCount-${story}`);
+          if (element) {
+            element.textContent = storyViewCount;
+          }
         });
-        
-        // Hikaye linklerine tıklama olayı ekle (sadece PDF)
+      }
+      
+      // Tıklama olaylarını ayarla
+      function setupClickHandlers() {
         const storyLinks = document.querySelectorAll('.story-card a[href*=".pdf"]');
         storyLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
+          link.addEventListener('click', async function(e) {
             const href = this.getAttribute('href');
             const storyName = href.split('/').pop().replace('.pdf', '');
             
-            let storyViewCount = localStorage.getItem(`viewCount-${storyName}`);
-            if (!storyViewCount) {
-              storyViewCount = 0;
+            // API'ye görüntüleme sayısını artır
+            try {
+              const response = await fetch(`${API_BASE_URL}/incrementView`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ storyName: storyName })
+              });
+              
+              if (response.ok) {
+                const result = await response.json();
+                // Sayacı güncelle
+                const element = document.getElementById(`viewCount-${storyName}`);
+                if (element) {
+                  element.textContent = result.newCount;
+                }
+              } else {
+                console.error('Görüntüleme sayısı artırılamadı');
+                // Fallback: localStorage'a kaydet
+                incrementLocalStorage(storyName);
+              }
+            } catch (error) {
+              console.error('API bağlantı hatası:', error);
+              // Fallback: localStorage'a kaydet
+              incrementLocalStorage(storyName);
             }
-            storyViewCount = parseInt(storyViewCount) + 1;
-            localStorage.setItem(`viewCount-${storyName}`, storyViewCount);
-            document.getElementById(`viewCount-${storyName}`).textContent = storyViewCount;
           });
         });
-      };
+      }
+      
+      // localStorage'a kaydetme (fallback)
+      function incrementLocalStorage(storyName) {
+        let storyViewCount = localStorage.getItem(`viewCount-${storyName}`);
+        if (!storyViewCount) {
+          storyViewCount = 0;
+        }
+        storyViewCount = parseInt(storyViewCount) + 1;
+        localStorage.setItem(`viewCount-${storyName}`, storyViewCount);
+        
+        const element = document.getElementById(`viewCount-${storyName}`);
+        if (element) {
+          element.textContent = storyViewCount;
+        }
+      }
     </script>
 
 </body>
