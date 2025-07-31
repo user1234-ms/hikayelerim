@@ -20,6 +20,7 @@
 - `contact.html` - İletişim sayfası
 - `styles.css` - Tasarım
 - `pdfs/` - PDF ve ses dosyaları
+- `NASIL-KULLANILIR.md` - Bu kullanım rehberi
 
 ## 🔒 **Güvenlik**
 
