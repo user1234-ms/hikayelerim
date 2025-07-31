@@ -2,14 +2,14 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(255,255,255,0.05)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.03)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
   background-size: cover;
   color: #111;
   margin: 0;
   padding: 0;
 }
 nav {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.033);
   padding: 1rem 0;
 }
 nav ul {
@@ -32,12 +32,13 @@ nav ul li a {
   font-style: italic;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
+  opacity: 0.5;
 }
 nav ul li a:hover {
   color: #005fa3;
 }
 header, main {
-  max-width: 700px;
+  max-width: 320px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -46,7 +47,7 @@ h1 {
   font-style: italic;
   font-size: 60px;
   text-align: center;
-  color: #444;
+  color: #222;
 }
 h1, h2, h3, h4, h5, h6, p, li, label, input, textarea {
   text-align: center;
@@ -69,7 +70,7 @@ ul li, ol li {
 }
 .about, .contact, .story {
   background: rgba(255,255,255,0.25);
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  box-shadow: 0 6px 24px 0 rgba(31,38,135,0.154);
   backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 2rem;
@@ -95,6 +96,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s;
+  opacity: 0.5;
 }
 button:hover {
   background: #005fa3;
@@ -109,23 +111,23 @@ body, h1, h2, h3, h4, h5, h6, nav, p, li, label, input, textarea, .about, .conta
   font-style: italic;
 }
 h1, h2, h3, h4, h5, h6, p, li, label {
-  text-shadow: 0 6px 20px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.7);
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.28), 0 1px 1px rgba(0,0,0,0.20), 0 1px 0 rgba(255,255,255,0.8);
 }
 .glass-box {
   background: rgba(255,255,255,0.25);
-  box-shadow: 0 16px 48px 0 rgba(0,0,0,0.5), 0 8px 24px 0 rgba(0,0,0,0.4), 0 4px 12px 0 rgba(0,0,0,0.3), 0 2px 6px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px 0 rgba(0,0,0,0.286), 0 5px 12px 0 rgba(0,0,0,0.231), 0 2px 6px 0 rgba(0,0,0,0.176), 0 1px 3px 0 rgba(0,0,0,0.11);
   backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 2rem;
   margin-top: 2rem;
 }
 .gradient-text {
-  color: #444;
+  color: #222;
   font-weight: bold;
 }
 .special-message {
-  color: #222;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  color: #111;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.12);
   font-weight: 600;
   font-size: 1.15rem;
 }
@@ -146,13 +148,13 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   height: 220px;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.7), 0 8px 20px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.583), 0 6px 15px rgba(0,0,0,0.495), 0 3px 8px rgba(0,0,0,0.418), 0 2px 5px rgba(0,0,0,0.33), 0 1px 2px rgba(0,0,0,0.253);
   transition: transform 0.2s, box-shadow 0.2s;
   display: block;
 }
 .story-cover-large:hover {
   transform: scale(1.06) translateY(-4px);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.8), 0 12px 24px rgba(0,0,0,0.7), 0 6px 12px rgba(0,0,0,0.6), 0 3px 8px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 36px rgba(0,0,0,0.66), 0 9px 18px rgba(0,0,0,0.583), 0 5px 9px rgba(0,0,0,0.495), 0 2px 6px rgba(0,0,0,0.418), 0 1px 3px rgba(0,0,0,0.33);
 }
 .story-card {
   display: flex;
@@ -168,7 +170,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
 .story-date {
   margin-top: 0.7rem;
   font-size: 1.1rem;
-  color: #444;
+  color: #222;
   font-style: italic;
   text-align: center;
   letter-spacing: 0.01em;
@@ -177,18 +179,18 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   margin-top: 0.7rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #444;
+  color: #222;
   text-align: center;
   letter-spacing: 0.01em;
   line-height: 1.3;
   word-wrap: break-word;
   hyphens: auto;
-  text-shadow: 0 4px 16px rgba(0,0,0,0.5), 0 3px 8px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.8);
+  text-shadow: 0 3px 12px rgba(0,0,0,0.50), 0 2px 6px rgba(0,0,0,0.40), 0 2px 3px rgba(0,0,0,0.30), 0 1px 1px rgba(0,0,0,0.20), 0 1px 0 rgba(255,255,255,0.8);
 }
 .story-subtitle {
   margin-top: 0.3rem;
   font-size: 0.95rem;
-  color: #444;
+  color: #222;
   text-align: center;
   letter-spacing: 0.01em;
   font-style: italic;
@@ -197,7 +199,7 @@ h1, h2, h3, h4, h5, h6, p, li, label {
   hyphens: auto;
 }
 .contact label {
-  color: #444;
+  color: #222;
 }
 .stories-list.glass-box {
   max-width: 700px;
@@ -277,7 +279,7 @@ main {
   border-radius: 24px !important;
 }
 header.glass-box {
-  max-width: 700px !important;
+  max-width: 320px !important;
   margin: 2rem auto !important;
   border-radius: 24px !important;
 } 
@@ -297,12 +299,13 @@ header.glass-box {
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.2s, text-shadow 0.2s;
-  text-shadow: 0 4px 16px rgba(0,0,0,0.7), 0 3px 8px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.8);
+  text-shadow: 0 3px 12px rgba(0,0,0,0.583), 0 2px 6px rgba(0,0,0,0.495), 0 2px 3px rgba(0,0,0,0.418), 0 1px 1px rgba(0,0,0,0.33), 0 1px 0 rgba(255,255,255,0.8);
+  opacity: 0.5;
 }
 
 .audio-link a:hover {
   color: #005fa3;
-  text-shadow: 0 6px 20px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.7), 0 3px 6px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.9);
+  text-shadow: 0 5px 15px rgba(0,0,0,0.66), 0 3px 9px rgba(0,0,0,0.583), 0 2px 5px rgba(0,0,0,0.495), 0 2px 3px rgba(0,0,0,0.418), 0 1px 1px rgba(0,0,0,0.33), 0 1px 0 rgba(255,255,255,0.9);
 }
 
 .bottom-spacer {
